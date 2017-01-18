@@ -11,14 +11,13 @@ dis = b**2 - 4*a*c
 
 if dis < 0 
 	puts "Дискриминант = #{dis}, корней нет"
-
 else
+	e = Math.sqrt(dis)
+	x1 = (-b + e) / (2 * a)
+	x2 = (-b - e) / (2 * a)
 	if dis > 0
-		e = Math.sqrt(dis)
-		x1 = (-b + e) / (2 * a)
-		x2 = (-b - e) / (2 * a)
 		puts "Дискриминант = #{dis}, корень уравнения 1 = #{x1}, корень уравнения 2 = #{x2}"
-	else dis == 0
+	else 
 		puts "Дискриминант = #{dis}, корень уравнения = #{x1}"
 	end
 end
